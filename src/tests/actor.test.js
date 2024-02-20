@@ -23,7 +23,7 @@ async() => {
 
     expect(res.statusCode).toBe(201)
     expect(res.body).toBeDefined()
-    expect(res.body.name).toBe(actor.name)
+    expect(res.body.firstName).toBe(actor.firstName)
 })
 
 test("GetAll -> 'URL_ACTORS', should to be status code 200 and res.body to be defined and res.body.length = 1", 
@@ -43,7 +43,7 @@ async() => {
 
     expect(res.statusCode).toBe(200)
     expect(res.body).toBeDefined()
-    expect(res.body.name).toBe(actor.name)
+    expect(res.body.firstName).toBe(actor.firstName)
 })
 
 
