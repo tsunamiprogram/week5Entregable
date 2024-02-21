@@ -58,5 +58,6 @@ async() => {
     .delete(`${URL_GENRES}/${genreId}`)
 
     expect(res.statusCode).toBe(204)
+    
 })
 

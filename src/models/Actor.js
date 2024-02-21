@@ -22,6 +22,7 @@ const Actor = sequelize.define('actor', {
         type: DataTypes.DATEONLY,
         allowNull: false
     },
-});
+}
+);
 
 module.exports = Actor;

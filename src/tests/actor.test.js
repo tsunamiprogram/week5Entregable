@@ -65,4 +65,5 @@ async() => {
     .delete(`${URL_ACTORS}/${actorId}`)
 
     expect(res.statusCode).toBe(204)
+    
 })

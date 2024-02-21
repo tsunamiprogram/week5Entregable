@@ -13,7 +13,7 @@ const director = {
 
 let directorId;
 
-test("Post -> 'URL_DIRECTORS', should return to be status code 201 and res.body to be defined and res.body.name = actor.name", 
+test("Post -> 'URL_DIRECTORS', should return to be status code 201 and res.body to be defined and res.body.firstName = actor.firsName", 
 async() => {
     const res = await request(app)
     .post(URL_DIRECTORS)
@@ -47,13 +47,12 @@ async() => {
 })
 
 
-test("Put -> 'URL_DIRECTORS/:id', should return status code 200, res.body to be defined and res.body.name = 'rayoMacken' ", 
+test("Put -> 'URL_DIRECTORS/:id', should return status code 200, res.body to be defined and res.body.name = 'sinatra' ", 
 async() => {
     const res = await request(app)
     .put(`${URL_DIRECTORS}/${directorId}`)
     .send({ firstName: 'sinatra'})
 
-    //console.log(res.body)
     expect(res.statusCode).toBe(200)
     expect(res.body).toBeDefined()
     expect(res.body.firstName).toBe('sinatra')
@@ -65,4 +64,5 @@ async() => {
     .delete(`${URL_DIRECTORS}/${directorId}`)
 
     expect(res.statusCode).toBe(204)
+    
 })
